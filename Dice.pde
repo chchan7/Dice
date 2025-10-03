@@ -9,7 +9,7 @@ void setup() {
 void draw() {
   background((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
   total = 0;
-  size = 60;
+  blockSize = 60;
 
 
   for (int a = 0; a < 5; a++) {
@@ -54,19 +54,19 @@ class Die {
   void show() {
     
     fill((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
-    rect(myX, myY, size, size);
+    rect(myX, myY, blockSize, blockSize);
     fill(0);
 
-    int radius = size / 8;   
-    int offset = size / 4;
+    int radius = blockSize / 8;   
+    int offset = blockSize / 4;
 
 
-    int centerX = myX + size / 2;
-    int centerY = myY + size / 2;
+    int centerX = myX + blockSize / 2;
+    int centerY = myY + blockSize / 2;
     int left = myX + offset;
-    int right = myX + size - offset;
+    int right = myX + blockSize - offset;
     int top = myY + offset;
-    int bottom = myY + size - offset;
+    int bottom = myY + blockSize - offset;
 
   
     if (score == 1 || score == 3 || score == 5) {
