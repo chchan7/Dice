@@ -9,7 +9,7 @@ void setup() {
 void draw() {
   background((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
   total = 0;
-  blockSize = 60;
+  size = 60;
 
 
   for (int a = 0; a < 5; a++) {
@@ -17,7 +17,7 @@ void draw() {
       int x = 50 + b * 100;
       int y = 50 + a * 100;
 
-      
+      // die instances
       Die bob = new Die(x, y);
       bob.roll();
       bob.show();
@@ -26,7 +26,7 @@ void draw() {
     }
   }
 
-  
+  // display total
   fill(0);
   textSize(24);
   text("Total: " + total, 50, height - 30);
@@ -38,37 +38,37 @@ void mousePressed() {
 
 
 class Die {
-  int myX, myY;   
-  int score; 
+  int myX, myY;   // position
+  int score;  // number rolled
 
   Die(int x, int y) {
     myX = x;
     myY = y;
-    roll(); 
+    roll();  // initial roll
   }
 
   void roll() {
-    score = (int)(Math.random() * 6) + 1; 
+    score = (int)(Math.random() * 6) + 1; // random 1–6
   }
 
   void show() {
-    
+    // draw die face
     fill((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
-    rect(myX, myY, blockSize, blockSize);
+    rect(myX, myY, size, size);
     fill(0);
 
-    int radius = blockSize / 8;   
-    int offset = blockSize / 4;
+    int radius = size / 8;   // dot radius
+    int offset = size / 4;
 
-
-    int centerX = myX + blockSize / 2;
-    int centerY = myY + blockSize / 2;
+    // dot positions
+    int centerX = myX + size / 2;
+    int centerY = myY + size / 2;
     int left = myX + offset;
-    int right = myX + blockSize - offset;
+    int right = myX + size - offset;
     int top = myY + offset;
-    int bottom = myY + blockSize - offset;
+    int bottom = myY + size - offset;
 
-  
+    // draw dots based on value
     if (score == 1 || score == 3 || score == 5) {
       ellipse(centerX, centerY, radius, radius);
     }
@@ -86,6 +86,9 @@ class Die {
     }
   }
 }
+
+
+
 
 
 
