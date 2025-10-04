@@ -2,7 +2,7 @@ int total = 0;
 int dsize = 60;
 
 void setup() {
-  size(600, 600);
+  size(2000, 2000);
   noLoop(); 
 }
 
@@ -10,8 +10,8 @@ void draw() {
   background((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
 
 
-  for (int a = 0; a < 5; a++) {
-    for (int b = 0; b < 5; b++) {
+  for (int a = 0; a < 20; a++) {
+    for (int b = 0; b < 20; b++) {
       int x = 50 + b * 100;
       int y = 50 + a * 100;
 
@@ -27,7 +27,8 @@ void draw() {
 
   fill(0);
   textSize(24);
-  text("Total: " + total, 50, height - 30);
+  text("Sum: " + total, 50, height - 30);
+  text("get 1 mil if ur cool, width - 1000, height - 30)
 }
 
 void mousePressed() {
