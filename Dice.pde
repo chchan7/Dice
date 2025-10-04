@@ -1,5 +1,5 @@
-int total; 
-int size;
+int total = 0;; 
+int size = 60;
 
 void setup() {
   size(600, 600);
@@ -8,8 +8,6 @@ void setup() {
 
 void draw() {
   background((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
-  total = 0;
-  size = 60;
 
 
   for (int a = 0; a < 5; a++) {
@@ -86,8 +84,6 @@ class Die {
     }
   }
 }
-
-
 
 
 
