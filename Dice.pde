@@ -10,7 +10,7 @@ void draw() {
   background((int)(Math.random() * 256),(int)(Math.random() * 256),(int)(Math.random() * 256));
 
 
-  for (int a = 0; a < 20; a++) {
+  for (int a = 0; a < 19; a++) {
     for (int b = 0; b < 20; b++) {
       int x = 50 + b * 100;
       int y = 50 + a * 100;
