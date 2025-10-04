@@ -28,7 +28,7 @@ void draw() {
   fill(0);
   textSize(24);
   text("Sum: " + total, 50, height - 30);
-  text("get 1 mil if ur cool, width - 1000, height - 30)
+  text("get 1 mil if ur cool", width - 1000, height - 30);
 }
 
 void mousePressed() {
